@@ -1,0 +1,21 @@
+<%= form_for @book do |b| %>
+<p>
+  <%= b.label :title, "title of the book:" %>
+  <%= b.text_field :title%>
+
+</p>
+
+<p>
+  <%= b.label :description, "content:" %>
+  <%= b.text_area :description %>
+
+</p>
+
+<p>
+<%= b.label :publish_date, "is published on:" %>
+<%= date_field(:book , :publish_date) %>
+</p>
+
+
+<%= b.submit "submit" %>
+<% end %>
